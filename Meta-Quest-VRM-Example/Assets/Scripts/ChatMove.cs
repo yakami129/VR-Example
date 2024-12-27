@@ -52,6 +52,7 @@ public class ChatMove : MonoBehaviour
     private void ChangeAnimation()
     {
         animator.SetFloat("speed", move.magnitude);
-        Debug.Log($"动画速度已更新: {move.magnitude:F2}");
+        animator.SetFloat("forward", forwardAmount);
+        animator.SetFloat("turn", turnAmount);
     }
 }
